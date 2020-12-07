@@ -1,4 +1,4 @@
-import * as React from 'react';
+/*import * as React from 'react';
 import {
     Button,
     Text,
@@ -85,4 +85,4 @@ export default class SignUp extends React.Component {
         }
         return <Button onPress={this.handleSubmit} title="Create user" />;
     };
-}
+}*/

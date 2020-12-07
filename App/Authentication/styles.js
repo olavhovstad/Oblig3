@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+/*import {StyleSheet} from 'react-native';
 
 export const defaultStyles = {
 	text: {
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         flex:1},
   
 
-/* Transform into defaultStyles or use StyleSheet.create in the specific modules */
+/* Transform into defaultStyles or use StyleSheet.create in the specific modules 
 
 	backgroundStyle: {},
 	containerForLogin: {
@@ -235,3 +235,4 @@ const styles = StyleSheet.create({
 });
 
 export default styles;
+*/

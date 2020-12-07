@@ -1,23 +1,17 @@
-import * as React from 'react';
-import { Button, View, TouchableOpacity } from 'react-native';
-import firebase from 'firebase';
-
-//import { createDrawerNavigator } from '@react-navigation/drawer';
+/*import * as React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import { createAppContainer } from 'react-navigation';
 
-import { SimpleLineIcons } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
 import LoginView from '../Authentication/LoginView';
 import SignUp from '../Authentication/SignUp';
-import { AppLoading } from 'expo';
 import { ActivityIndicator } from 'react-native-paper';
-/*
+import Drawers from './Drawers';
+
 const LoginStack = createStackNavigator({
-    Login : LoginView,
-    Register : SignUp,
+    Login : {screen: LoginView},
+    SignUp : {screen: SignUp},
 
 },
 {
@@ -27,68 +21,30 @@ const LoginStack = createStackNavigator({
         headerTintColor: 'white'
     }),
 });
-*/
+
 //konstruerer en stacknavigator til å håndtere views(currency list)
+/*
 const LoginStack = createStackNavigator({
-    Login: {screen: LoginView},
-    SignUp : {screen: SignUp},
+    'Login': {screen: LoginView},
+    'SignUp' : {screen: SignUp},
 
     
 },
-{initialRouteKey: LoginView});
+{initialRouteKey: 'Login'});
 
-/*
-const FruitsStackNavigator = createStackNavigator({
-    'List of Fruits' : {screen : FruitList} 
-})
 
-/*
-const Drawer = createDrawerNavigator({
-Country: 
-{screen: CountryStackNavigator, 
-    navigationOptions:{
-        
-    }
-},
 
-Fruits: {
-    screen: FruitsStackNavigator,
-    navigationOptions:{
 
-    } 
-}
-});
 
-*/
-const TabNavigator = createBottomTabNavigator({
-    Camera: {screen: LoginStack,
-        navigationOptions: {
-            tabBarLabel:"Scan",
-            tabBarIcon: ({ tintColor }) => (
-                <SimpleLineIcons name="camera" size={24} color={tintColor} />
-            )
-        },
-    },
-    Currency: {screen: SignUp,
-        navigationOptions: {
-            tabBarLabel:"Currency",
-            tabBarIcon: ({ tintColor }) => (
-                <Entypo name="credit" size={24} color={tintColor} />
-            )
-        },
-    },
-  });
-/*
-const FreeAppContainer = createStackNavigator({
-    Country : {screen: FreeCScreen}
-
-})*/
-
-const AppContainer = createAppContainer(TabNavigator);
 
 const LoginAppContainer = createAppContainer(LoginStack);
-    
-    
+/*    
+//eksporterer klassen home (og da appcontainer), som vil bli kaldt i index.js
+export default class Home extends React.Component{
+    render() {
+        return <LoginAppContainer/>;
+    }
+};
  
 
 //eksporterer klassen home (og da appcontainer), som vil bli kaldt i index.js
@@ -115,7 +71,7 @@ renderAuth() {
         switch(this.state.loggedIn){
             case true:
                 return (
-                     <SignUp/>)
+                     <Drawers/>)
             case false: 
                 return (
                     <LoginAppContainer/>
@@ -124,4 +80,4 @@ renderAuth() {
                 return <ActivityIndicator size='large'/>;
         }
     }
-};
+};*/
