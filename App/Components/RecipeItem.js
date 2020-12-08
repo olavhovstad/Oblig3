@@ -21,7 +21,7 @@ export default class RecipeItem extends React.Component {
     render() {
         const { fruitANDvegetables } = this.props;
         return (
-            <TouchableOpacity style={styles.label} onPress={this.handlePress}>
+            <TouchableOpacity style={styles.label} onPress={this.handlePress} onPress={() => Linking.openURL(fruitANDvegetables.RecipeURL1)}>
                 <Text style={styles.arrayHeader}>
                     {fruitANDvegetables.recipeText1}                    
                 </Text>
