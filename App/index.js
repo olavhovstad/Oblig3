@@ -1,7 +1,6 @@
 import React from 'react';
 import firebase from 'firebase';
 import Drawers from './Screens/Drawers';
-import Home from './Screens/Home';
 
   export default class App extends React.Component {
 
@@ -26,7 +25,7 @@ import Home from './Screens/Home';
    
     }
     render(){
-     // return <Drawers/>
+     // returnerer 
      return <Drawers/>
     }
    }

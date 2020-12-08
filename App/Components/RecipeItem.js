@@ -1,20 +1,21 @@
-/*import * as React from 'react';
+import * as React from 'react';
 import {
     View,
     Text,
     FlatList,
     StyleSheet,
     TouchableOpacity,
-    Image
+    Image,
+    Linking
 } from 'react-native';
 import styles from './styles';
 
-export default class FAndVListItem extends React.Component {
+export default class RecipeItem extends React.Component {
     handlePress = () => {
         // Her pakker vi ting ud fra props
-        const {name,url, onSelect} = this.props
+        const {recipeText1, RecipeURL1, recipeImage1,  onSelect} = this.props
         // Kalder den onSelect prop vi får, med det ID vi har fået som argument.
-        onSelect(name, url)
+        onSelect(recipeText1, RecipeURL1, recipeImage1)
     };
 
     render() {
@@ -22,14 +23,14 @@ export default class FAndVListItem extends React.Component {
         return (
             <TouchableOpacity style={styles.label} onPress={this.handlePress}>
                 <Text style={styles.arrayHeader}>
-                    {fruitANDvegetables.name}                    
+                    {fruitANDvegetables.recipeText1}                    
                 </Text>
-                <Image source={{uri: fruitANDvegetables.url}}
+                <Image source={{uri: fruitANDvegetables.recipeImage1}}
                style={styles.arrayImage} />
-               <Text style={styles.arrayText}>
-                   Læs mere om {fruitANDvegetables.name} her
+               <Text style={styles.arrayText } onPress={() => Linking.openURL(fruitANDvegetables.RecipeURL1)}  >
+                   Se opskriften - {fruitANDvegetables.RecipeURL1} her
                </Text>
             </TouchableOpacity>
         );
     }
-}*/
+}

@@ -1,4 +1,3 @@
-import firebase from 'firebase';
 import * as React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -7,7 +6,7 @@ import DetailedFAndV from '../Components/DetailedFAndV';
 import AddFruits from '../Components/AddFruits';
 
 
-
+//kontruerer en stack navigator, som inneholder screens relatert til frukt & grønt
 const StackNavigator = createStackNavigator(
     {
    
@@ -19,12 +18,14 @@ const StackNavigator = createStackNavigator(
     { initialRouteKey: 'FAndVList', headerMode: "none" }
 );
 
+//Oppretter en appcointainer
 const AppContainer = createAppContainer(StackNavigator);
 
 
 export default class Hometry extends React.Component {
 
 render(){
+  //returnerer appcontainer, når Hometry blir kalt i Drawers 
     return( <AppContainer/>)
   
 }

@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     input: { borderWidth: 1, flex: 1 },
 });
 
-//Brukes for å legge inn valuta, samt kursen inn til databasen
+//Brukes for å legge inn frugt, samt div innhold inn til databasen
 //eksisterer ikke som et View, pga er kun admin som skal ha tilgang.
 export default class AddCurrency extends React.Component {
     state = {

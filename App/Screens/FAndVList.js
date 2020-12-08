@@ -3,12 +3,9 @@ import { View, Text, TouchableOpacity, SafeAreaView, ScrollView } from 'react-na
 import firebase from 'firebase';
 
 import FAndVListItem from '../Components/FAndVListItem';
-import DetailedFAndV from '../Components/DetailedFAndV';
 import styles from './styles';
 import { FlatList } from 'react-native-gesture-handler';
 import Dato from '../Components/Dato';
-import { Drawer } from 'react-native-paper';
-import Drawers from './Drawers';
 
 
 export default class FAndVList extends React.Component {
@@ -16,7 +13,7 @@ export default class FAndVList extends React.Component {
         items: {},
         name:{},
     };
-
+//refereanse til firebase databasen. 
     componentDidMount() {
         firebase
             .database()
@@ -26,6 +23,7 @@ export default class FAndVList extends React.Component {
             });
     }
 
+    //navigerer med navn som prop, til den detaljerte skjermen.
     handleSelectItems = name => {
         this.props.navigation.navigate('DetailedFAndV',{ name });
     };
@@ -36,9 +34,9 @@ export default class FAndVList extends React.Component {
         if (!items) {
             return null;
         }
-        // Flatlist forventer et array. Derfor tager vi alle values fra vores cars objekt, og bruger som array til listen
+        // Flatlist forventer et array. Derfor tar vi alle values fra vores frukt objekt, og bruger som array til listen
         const itemArray = Object.values(items);
-        // Vi skal også bruge alle IDer, så vi tager alle keys også.
+        // Vi skal også bruge alle navn, så vi tager alle keys også.
         const itemKeys = Object.keys(items);
         return (
             <SafeAreaView style={styles.container}>
@@ -56,7 +54,7 @@ export default class FAndVList extends React.Component {
 
                 <FlatList style={styles.scrollView}
                     data={itemArray}
-                    // Vi bruger carKeys til at finde ID på den aktuelle bil og returnerer dette som key, og giver det med som ID til CarListItem
+                    // Vi bruger itemKeys til å finde navn på den aktuelle frugt og returnerer dette som key, og giver det med som ID til FAndVListItem
                     keyExtractor={(item, index) => itemKeys[index]}
                     renderItem={({ item, index }) => (
                         <FAndVListItem

@@ -5,7 +5,8 @@ import {
     FlatList,
     StyleSheet,
     TouchableOpacity,
-    Image
+    Image,
+    
 } from 'react-native';
 import styles from './styles';
 

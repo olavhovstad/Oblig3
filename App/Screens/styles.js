@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-//Felles styling for componenter
+//Felles styling for Screens
     const styles = StyleSheet.create({
         container: {
             flex: 1,

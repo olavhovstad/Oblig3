@@ -1,19 +1,18 @@
-/*import * as React from 'react';
-import { View, Text, TouchableOpacity, SafeAreaView, ScrollView } from 'react-native';
+import * as React from 'react';
+import { View, Text, TouchableOpacity, SafeAreaView, ScrollView, Linking } from 'react-native';
 import firebase from 'firebase';
 
-import FAndVListItem from '../Components/FAndVListItem';
 import styles from './styles';
 import { FlatList } from 'react-native-gesture-handler';
-import Dato from '../Components/Dato';
-
+import RecipeItem from '../Components/RecipeItem';
 
 export default class Recipies extends React.Component {
     state = {
         items: {},
         recipeURL1:{},
     };
-
+     
+//ref til firebase database
     componentDidMount() {
         firebase
             .database()
@@ -23,16 +22,15 @@ export default class Recipies extends React.Component {
             });
     }
 
-   
     render() {
         const { items } = this.state;
         // Vi viser ingenting hvis der ikke er data
         if (!items) {
             return null;
         }
-        // Flatlist forventer et array. Derfor tager vi alle values fra vores cars objekt, og bruger som array til listen
+        // Flatlist forventer et array. Derfor tar vi alle values fra vores fruits&vegetables objekt, og bruger som array til listen
         const itemArray = Object.values(items);
-        // Vi skal også bruge alle IDer, så vi tager alle keys også.
+        // Vi skal også bruge alle navn, så vi tager alle keys også.
         const itemKeys = Object.keys(items);
         return (
             <SafeAreaView style={styles.container}>
@@ -43,15 +41,12 @@ export default class Recipies extends React.Component {
                 
                 <FlatList style={styles.scrollView}
                     data={itemArray}
-                    // Vi bruger carKeys til at finde ID på den aktuelle bil og returnerer dette som key, og giver det med som ID til CarListItem
+                    // Vi bruger itemKeys til at finde navn på den aktuelle frugt og returnerer dette som key, og giver det med som ID til RecipeItem
                     keyExtractor={(item, index) => itemKeys[index]}
                     renderItem={({ item, index }) => (
                         <RecipeItem
                             fruitANDvegetables={item}
-                            name={itemKeys[index]}
-                            onSelect={this.handeRecipe}
-                            
-                        
+                            recipeURL1={itemKeys[index]}
                         />
                     )}
                 >
@@ -61,4 +56,4 @@ export default class Recipies extends React.Component {
             </SafeAreaView>
         );
     }
-}*/
+}

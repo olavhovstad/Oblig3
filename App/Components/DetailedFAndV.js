@@ -39,6 +39,7 @@ class DetailedFAndV extends React.Component {
             return <Text>No data input</Text>
         }
         return (
+          //innhold i detaljert skjerm, bruker ref fra firebase til å hente alt innhold
 
             <SafeAreaView style={styles.detailedcontainer}>
                <ScrollView showsVerticalScrollIndicator={false}>
@@ -94,24 +95,24 @@ class DetailedFAndV extends React.Component {
                 Mangler du inspiration?
               </Text>
               <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row' }}>
-                  <TouchableOpacity style={styles.recipeButton} onPress={() => Linking.openURL(fruitANDvegetables.recipeURL1)}>
+                  <TouchableOpacity style={styles.recipeButton} onPress={() => Linking.openURL(fruitANDvegetables.RecipeURL1)}>
                     <Image source={{uri: fruitANDvegetables.recipeImage1}} style={styles.recipeImage}/>
                     <Text style={styles.recipeText}>{fruitANDvegetables.recipeText1}</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.recipeButton} onPress={() => Linking.openURL(fruitANDvegetables.recipeURL2)}>
+                    <TouchableOpacity style={styles.recipeButton} onPress={() => Linking.openURL(fruitANDvegetables.RecipeURL2)}>
                     <Image source={{uri: fruitANDvegetables.recipeImage2}} style={styles.recipeImage}/>
                     <Text style={styles.recipeText}>{fruitANDvegetables.recipeText2}</Text>
                     </TouchableOpacity>
                     </View>
 
                     <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row' }}>
-                    <TouchableOpacity style={styles.recipeButton} onPress={() => Linking.openURL(fruitANDvegetables.recipeURL3)}>
+                    <TouchableOpacity style={styles.recipeButton} onPress={() => Linking.openURL(fruitANDvegetables.RecipeURL3)}>
                     <Image source={{uri: fruitANDvegetables.recipeImage3}} style={styles.recipeImage}/>
                     <Text style={styles.recipeText}>{fruitANDvegetables.recipeText3}</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.recipeButton} onPress={() => Linking.openURL(fruitANDvegetables.recipeURL4)}>
+              <TouchableOpacity style={styles.recipeButton} onPress={() => Linking.openURL(fruitANDvegetables.RecipeURL4)}>
                     <Image source={{uri: fruitANDvegetables.recipeImage4}} style={styles.recipeImage}/>
                     <Text style={styles.recipeText}>{fruitANDvegetables.recipeText4}</Text>
               </TouchableOpacity>
