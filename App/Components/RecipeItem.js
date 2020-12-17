@@ -28,7 +28,7 @@ export default class RecipeItem extends React.Component {
                 <Image source={{uri: fruitANDvegetables.recipeImage1}}
                style={styles.arrayImage} />
                <Text style={styles.arrayText } onPress={() => Linking.openURL(fruitANDvegetables.RecipeURL1)}  >
-                   Se opskriften - {fruitANDvegetables.RecipeURL1} her
+                   Se opskriften her
                </Text>
             </TouchableOpacity>
         );
