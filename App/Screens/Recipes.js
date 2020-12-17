@@ -34,7 +34,7 @@ export default class Recipies extends React.Component {
         const itemKeys = Object.keys(items);
         return (
             <SafeAreaView style={styles.container}>
-                <ScrollView>
+              
                 <Text style={styles.oversigt}>
                             Opskrifter
                      </Text>
@@ -52,7 +52,7 @@ export default class Recipies extends React.Component {
                 >
                    
                 </FlatList>
-                </ScrollView>
+              
             </SafeAreaView>
         );
     }

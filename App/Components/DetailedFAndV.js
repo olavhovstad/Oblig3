@@ -72,8 +72,6 @@ class DetailedFAndV extends React.Component {
               {fruitANDvegetables.nutrition.Fedt}
               </Text>
              
-              
-
               <Text style={styles.climate}>
               Klimapåvirkning
               </Text>
